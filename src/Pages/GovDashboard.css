@@ -1,0 +1,196 @@
+.gov-dash-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #050616 0%, #020013 55%, #000008 100%);
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
+
+/* top strip */
+
+.gov-dash-topbar {
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.9),
+    rgba(15, 23, 42, 0.6),
+    transparent
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  z-index: 10;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-logo {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.topbar-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(96, 165, 250, 0.7);
+  color: rgba(191, 219, 254, 0.95);
+}
+
+.topbar-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-status-label {
+  font-size: 11px;
+  color: rgba(148, 163, 184, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.topbar-status-chip {
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.topbar-status-chip--calm {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(96, 165, 250, 0.9);
+  color: #bfdbfe;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* notifications */
+
+.topbar-notif {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: radial-gradient(
+    circle at 30% 0%,
+    rgba(248, 113, 113, 0.2),
+    rgba(15, 23, 42, 0.9)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.notif-dot {
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #f97373;
+  box-shadow: 0 0 8px rgba(248, 113, 113, 0.9);
+}
+
+.notif-bell {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px 6px 4px 4px;
+  border: 1.5px solid rgba(248, 250, 252, 0.85);
+  position: relative;
+}
+
+.notif-bell::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.9);
+}
+
+/* user chip */
+
+.topbar-userchip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: radial-gradient(
+    circle at 0 0,
+    rgba(59, 130, 246, 0.18),
+    rgba(15, 23, 42, 0.9)
+  );
+  cursor: pointer;
+}
+
+.userchip-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #02101c;
+}
+
+.userchip-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.userchip-name {
+  font-size: 11px;
+  color: #e5e7eb;
+}
+
+.userchip-meta {
+  font-size: 10px;
+  color: #a5b4fc;
+}
+
+/* main */
+
+.gov-dash-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.5rem 2.5rem;
+}
+
+/* center grid and prevent overlap */
+
+.gov-dash-main .card-grid {
+  max-width: 72rem;
+  width: 100%;
+}

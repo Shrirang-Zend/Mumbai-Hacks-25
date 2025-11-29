@@ -1,0 +1,107 @@
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px);
+  background: radial-gradient(circle at top, rgba(4, 8, 24, 0.95), rgba(2, 3, 10, 0.85));
+}
+
+.nav {
+  width: 100%;
+  padding: 1rem 0;           /* no horizontal padding */
+}
+
+/* aligned to the right, but stays fully inside */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;                 /* space between links and login */
+  margin-left: auto;         /* push whole group to the right */
+  padding-right: 0.75rem;    /* tiny inset so login is not clipped */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-link {
+  position: relative;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #c9cedf;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f75454, #d30f0f);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #ffffff;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* login button (unchanged) */
+.user-profile {
+  width: 131px;
+  height: 51px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    to bottom right,
+    #ff2e2e 0%,
+    rgba(46, 142, 255, 0) 30%
+  );
+  background-color: rgba(46, 142, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile:hover,
+.user-profile:focus {
+  background-color: rgba(255, 46, 46, 0.7);
+  box-shadow: 0 0 10px rgba(255, 46, 46, 0.5);
+  outline: none;
+}
+
+.user-profile-inner {
+  width: 127px;
+  height: 47px;
+  border-radius: 13px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-profile-inner svg {
+  width: 27px;
+  height: 27px;
+  fill: #fff;
+}

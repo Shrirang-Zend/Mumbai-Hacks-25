@@ -1,0 +1,122 @@
+.role-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(7, 9, 24, 0.9), rgba(1, 0, 6, 0.96));
+  backdrop-filter: blur(16px);
+}
+
+.role-modal-card {
+  position: relative;
+  width: min(520px, 92vw);
+  padding: 2.4rem 2.6rem 2.2rem;
+  border-radius: 24px;
+  background: radial-gradient(circle at top left, rgba(255, 80, 120, 0.12), rgba(10, 7, 18, 0.98));
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 26px 80px rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  color: #ffffff;
+}
+
+.role-modal-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.9rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(18, 18, 28, 0.8);
+  color: #f9fafb;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.role-modal-close:hover {
+  background: rgba(255, 80, 120, 0.9);
+  transform: translateY(-1px);
+}
+
+.role-modal-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem;
+  color: rgba(248, 250, 255, 0.7);
+}
+
+.role-modal-title {
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+  font-size: 2rem;                        /* tiny bump */
+  letter-spacing: 0.02em;
+}
+
+.role-modal-sub {
+  margin: 0 0 1.6rem;
+  font-size: 0.99rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.role-modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.role-pill {
+  width: 100%;
+  text-align: left;
+  border-radius: 16px;
+  border: none;
+  padding: 0.85rem 1rem 0.9rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.role-pill-user {
+  background: linear-gradient(120deg, rgba(15, 118, 255, 0.22), rgba(15, 23, 42, 0.96));
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4);
+}
+
+.role-pill-gov {
+  background: linear-gradient(120deg, rgba(248, 70, 90, 0.24), rgba(24, 10, 20, 0.96));
+  box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.5);
+}
+
+.role-pill:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 18px 40px rgba(0, 0, 0, 0.9);
+}
+
+.role-pill-label {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.role-pill-sub {
+  font-size: 0.8rem;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+@media (max-width: 640px) {
+  .role-modal-card {
+    padding: 2rem 1.6rem 1.8rem;
+  }
+}

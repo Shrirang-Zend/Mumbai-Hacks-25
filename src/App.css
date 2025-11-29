@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;   /* smooth, no snap here */
+}
+
+/* this is the only snapping scroller */
+.snap-shell {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+/* each full-screen page */
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+.app-shell.user-dashboard-active {
+  height: 100vh;
+  overflow: hidden;       /* page itself cannot scroll */
+}
+.app-shell.user-dashboard-active .user-dash-root {
+  height: 100%;
+}
+
+/* each top-level page section (home, features, about, etc.) */
+main > section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
